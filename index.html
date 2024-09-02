@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+    
+</head>
+<body>
+    
+    <div class="contenedor__formulario">
+    <form action="" class="formulario" id="formulario" method="$_POST">
+        <!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="usuario" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="usuario" placeholder="john123">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">El nombre no debe de contener numeros</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__apellidoP">
+				<label for="nombre" class="formulario__label">Apellido Paterno</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellidoP" id="nombre" placeholder="John Doe">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">El apellido Paterno no debe de contener numeros</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__apellidoM">
+				<label for="password" class="formulario__label">Apellido Materno</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellidoM" id="password">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">El apellido Materno no debe de contener numeros</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__grupo">
+				<label for="password2" class="formulario__label">Grupo</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="grupo" id="password2">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">El grupo no debe de tener letras</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__estatura">
+				<label for="telefono" class="formulario__label">Estatura en cm</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="estatura" id="telefono" placeholder="170">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">La estatura no debe de contener letras</p>
+			</div>
+
+            <div class="formulario__grupo" id="grupo__carrera">
+				<label for="telefono" class="formulario__label">Carrera</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="carrera" id="telefono" placeholder="Programacion">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">El carrera solo puede contener  el maximo de 14 dígitos.</p>
+			</div>
+
+            <div class="formulario__grupo" id="grupo__edad">
+				<label for="telefono" class="formulario__label">Edad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="edad" id="telefono" placeholder="44">
+                    <span class="formulario__validacion-estado material-symbols-outlined">error</span>				</div>
+				<p class="formulario__input-error">La edad no debe de contener letras</p>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><span class="material-symbols-outlined">warning</span> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Registrar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+    </form>
+    <script src="app.js"></script>
+    <!-- <script src="src\menu.js"></script> -->
+</body>
+</html>

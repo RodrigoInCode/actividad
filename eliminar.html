@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Estudiante</title>
+</head>
+<body>
+
+<h2>Eliminar Estudiante</h2>
+
+<input type="number" id="studentId" placeholder="ID del estudiante">
+
+<button onclick="eliminarEstudiante()">Eliminar Estudiante</button>
+
+<p id="resultado"></p>
+
+<script>
+function eliminarEstudiante() {
+    const studentId = document.getElementById('studentId').value;
+    fetch('eliminar.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `id=${studentId}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('resultado').innerText = data;
+    })
+    .catch(error => {
+        document.getElementById('resultado').innerText = 'Error al eliminar el estudiante';
+        console.error('Error:', error);
+    });
+}
+</script>
+
+</body>
+</html>
